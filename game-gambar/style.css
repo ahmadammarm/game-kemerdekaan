@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #cc0000;
+  margin: 0; /* Tambahkan ini untuk menghilangkan margin bawaan pada body */
+  overflow: hidden; /* Tambahkan properti ini untuk menghindari scroll */
+}
+
+.wrapper {
+  box-sizing: content-box;
+  width: 26.87em;
+  padding: 2.5em 3em;
+  background-color: #ffffff;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 0.6em;
+  box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+}
+
+.game-container {
+  position: relative;
+  width: 100%;
+  display: grid;
+  gap: 0.6em;
+}
+
+.stats-container {
+  text-align: right;
+  margin-bottom: 1.2em;
+}
+
+.stats-container span {
+  font-weight: 600;
+}
+
+.card-container {
+  position: relative;
+  width: 4em; /* Mengubah lebar kartu menjadi 4em */
+  height: 4em; /* Mengubah tinggi kartu menjadi 4em */
+  cursor: pointer;
+}
+
+.card-before,
+.card-after {
+  position: absolute;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000000; /* Mengubah ketebalan border menjadi 2px */
+  transition: transform 0.7s ease-out;
+  backface-visibility: hidden;
+}
+
+.card-before {
+  background-color: #cc0000;
+  font-size: 1.6em; /* Mengubah ukuran font menjadi 1.6em */
+  font-weight: 600;
+}
+
+.card-after {
+  background-color: #ffffff;
+  transform: rotateY(180deg);
+}
+
+.card-container.flipped .card-before {
+  transform: rotateY(180deg);
+}
+
+.card-container.flipped .card-after {
+  transform: rotateY(0deg);
+}
+
+.controls-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #cc0000;
+  top: 0;
+}
+
+button {
+  border: none;
+  border-radius: 0.3em;
+  padding: 1em 1.5em;
+  cursor: pointer;
+}
+
+#stop {
+  font-size: 1em; /* Mengubah ukuran font menjadi 1em */
+  display: block;
+  margin: 1em auto 0 auto;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.controls-container button {
+  font-size: 1.2em; /* Mengubah ukuran font menjadi 1.2em */
+  box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
+}
+
+#rules {
+    margin-right: 30px;
+}
+
+.hide {
+  display: none;
+}
+
+#result {
+  text-align: center;
+}
+
+#result h2 {
+  font-size: 2em; /* Mengubah ukuran font menjadi 2em */
+}
+
+#result h4 {
+  font-size: 1.4em; /* Mengubah ukuran font menjadi 1.4em */
+  margin: 0.6em 0 1em 0;
+}
