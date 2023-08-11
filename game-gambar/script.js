@@ -14,6 +14,7 @@ const rulesButton = document.getElementById("rules");
 
 rulesButton.addEventListener("click", () => {
   const rulesContent = `
+    <p>- Game ini adalah game untuk meningkatkan ingatan Anda dengan berupa gambar</p>
     <p>- Klik "Mulai Game" untuk memulai permainan</p>
     <p>- Waktu yang Anda miliki untuk menyocokkan gambar adalah 2 menit</p>
     <p>- Apabila waktu melebihi 2 menit, Anda akan kalah otomatis</p>
@@ -23,7 +24,7 @@ rulesButton.addEventListener("click", () => {
   `;
 
   Swal.fire({
-    title: 'Peraturan Game Gambar',
+    title: 'Game Pahlawan Kemerdekaan',
     html: rulesContent,
     confirmButtonText: 'Oke',
   });
@@ -186,8 +187,8 @@ const matrixGenerator = (cardValues, size = 4) => {
             winCount += 1;
             //check if winCount ==half of cardValues
             if (winCount == Math.floor(cardValues.length / 2)) {
-              result.innerHTML = `<h2>You Won</h2>
-            <h4>Moves: ${movesCount}</h4>`;
+              result.innerHTML = `<h2>Kamu Menang</h2>
+            <h4>Jumlah Moves: ${movesCount}</h4>`;
               stopGame();
             }
           } else {
