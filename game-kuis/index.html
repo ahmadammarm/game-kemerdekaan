@@ -7,7 +7,7 @@
     <title>Kuis Kemerdekaan</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <!-- Icon -->
     <link rel="icon" href="images/icon.png" />
@@ -22,85 +22,12 @@
     />
   </head>
   <body>
-    <!-- Mulai Game Button -->
-    <div class="start-btn">
-      <button>Mulai Kuis</button>
-    </div>
-
-    <!-- Rules  Box -->
-    <div class="rules-box">
-      <div class="rules-title">
-        <span>Kuis Kemerdekaan</span>
-      </div>
-      <div class="rules-list">
-        <div class="rules">1. Kuis Kemerdekaan ini memiliki 10 pertanyaan</div>
-        <div class="rules">2. Anda hanya memiliki waktu untuk menjawab selama <span>20 detik</span> di setiap pertanyannya</div>
-        <div class="rules">3. Anda tidak bisa memilih jawaban lain ketika Anda sudah meng-klik salah satu opsi jawaban</div>
-        <div class="rules">4. Selama kuis berlangsung, Anda tidak bisa keluar dari kuis</div>
-        <div class="rules">5. Setiap pertanyaan memiliki poin sebesar 10 poin</div>
-      </div>
-      <div class="buttons">
-        <button class="quit">Keluar Kuis</button>
-        <button class="restart">Lanjutkan</button>
+    <div class="container">
+      <div id="home" class="flex-column flex-center">
+        <h1>Kuis Kemerdekaan</h1>
+        <a href="/game.html" class="btn">Mulai Kuis</a>
+        <a href="/leaderboard.html" id="leaderboard-btn" class="btn">Leaderboard<i class="fas fa-crown"></i></a>
       </div>
     </div>
-
-    <!-- Kuis Box -->
-    <div class="quiz-box">
-      <header>
-        <div class="title">Kuis Kemerdekaan</div>
-        <div class="timer">
-          <div class="time-text">Waktu Tersisa</div>
-          <div class="time-sec">20</div>
-        </div>
-      </header>
-      <section>
-        <div class="queue-text">
-          <span>Siapakah Bapak Proklamator Republik Indonesia ?</span>
-        </div>
-        <div class="option-list">
-          <div class="option">
-            <span>Ir. Soekarno</span>
-            <div class="icon tick"><i class="fas fa-check"></i></div>
-          </div>
-          <div class="option">
-            <span>Mohammad Hatta</span>
-            <div class="icon cross"><i class="fas fa-times"></i></div>
-          </div>
-          <div class="option">
-            <span>Mohammad Yamin</span>
-          </div>
-          <div class="option">
-            <span>WR. Soepratman</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- Quiz Box Footer -->
-      <footer>
-        <div class="total-queue">
-            <span><p>1</p>dari<p>10</p>Pertanyaan</span>
-        </div>
-        <button class="next-btn">Selanjutnya</button>
-      </footer>
-    </div>
-
-    <!-- Result Box -->
-    <div class="result-box">
-        <div class="icon">
-            <i class="fas fa-crown"></i>
-        </div>
-        <div class="complete-text">Anda telah menyelesaikan kuis !</div>
-        <div class="score-text">
-            <span>Maaf, Anda hanya dapat <p>1</p> dari <p>10</p></span>
-        </div>
-        <div class="buttons">
-            <button class="restart">Mulai Lagi</button>
-            <button class="quit">Keluar Kuis</button>
-        </div>
-    </div>
-
-    <script src="js/script.js"></script>
-    <script src="js/questions.js"></script>
   </body>
 </html>
