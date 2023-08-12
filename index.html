@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Kemerdekaan Indonesia - Games</title>
+    <title>Indonesia Merdeka - Games</title>
 
     <!-- Icon -->
     <link rel="icon" href="assets/images/icon.png">
@@ -17,6 +17,8 @@
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+     <!-- Include SweetAlert library -->
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -34,7 +36,7 @@
                   <nav class="main-nav">
                       <!-- ***** Menu Start ***** -->
                       <ul class="nav">
-                          <li><a href="https://github.com/ahmadammarm" target="_blank">Pembuat</a></li> 
+                        <li><a href="#" id="ratingLink">Rating</a></li> 
                       </ul>        
                       <a class='menu-trigger'>
                           <span>Menu</span>
@@ -60,7 +62,7 @@
                   <p>Indonesia Merdeka adalah website pengembang game sederhana yang meliputi 2 game berupa "Kuis Kemerdekaan" dan juga "Pahlawan Kemerdekaan"</p>
                   <div class="buttons">
                     <div class="red-button">
-                      <a href="#">Kuis Kemerdekaan</a>
+                      <a href="game-kuis/index.html">Kuis Kemerdekaan</a>
                     </div>
                     <div class="white-button">
                       <a href="game-gambar/index.html">Pahlawan Kemerdekaan</a>
@@ -74,22 +76,40 @@
       </div>
       
 
-  <!-- Scripts -->
-  <script>
-    function closeTab() {
-      window.close();
-    }
-  </script>
   <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <script src="assets/js/isotope.min.js"></script>
-    <script src="assets/js/owl-carousel.js"></script>
+    <!-- Alert Rating -->
+    <script>
+      // Ambil elemen link rating
+      const ratingLink = document.getElementById('ratingLink');
 
-    <script src="assets/js/tabs.js"></script>
-    <script src="assets/js/swiper.js"></script>
-    <script src="assets/js/custom.js"></script>
+      // Tambahkan event listener untuk meng-handle klik
+      ratingLink.addEventListener('click', function() {
+          // Tampilkan SweetAlert dengan inputan rating
+          Swal.fire({
+              title: 'Beri Rating 1 - 10 !',
+              html: '<input type="text" id="ratingInput">',
+              showCancelButton: true,
+              confirmButtonText: 'Submit',
+              cancelButtonText: 'Cancel',
+              preConfirm: () => {
+                  const ratingInput = document.getElementById('ratingInput');
+                  if (!ratingInput.value) {
+                      Swal.showValidationMessage('Rating harus diisi');
+                  }
+                  return ratingInput.value;
+              }
+          }).then((result) => {
+              if (result.isConfirmed) {
+                  const rating = result.value;
+                  // Lakukan sesuatu dengan nilai rating, misalnya kirim ke server
+                  Swal.fire(`Anda memberi rating: ${rating}`);
+              }
+          });
+      });
+  </script>
 
   </body>
 </html>
