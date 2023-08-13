@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis Kemerdekaan</title>
+
+    <!-- Icon -->
+    <link rel="icon" href="images/icon.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+</head>
+<body>
+    <div class="container">
+        <div id="end" class="flex-center flex-column">
+            <h1 id="finalScore">0</h1>
+            <form class="end-form-container">
+                <h2 id="end-text">Simpan skor Anda!</h2>
+                <input type="text" name="name" id="username" placeholder="Masukkan nama Anda" autocomplete="off">
+                <button class="btn" id="saveScoreBtn" type="submit" onclick="saveHighScore(event)" disabled>Simpan</button>
+                
+            </form>
+            <a href="/game.html" class="btn">Main Lagi</a>
+            <a href="/" class="btn">Kembali ke Home<i class="fas fa-home"></i></a>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="js/end.js"></script>
+</body>
+</html>
