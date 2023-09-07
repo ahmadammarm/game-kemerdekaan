@@ -30,7 +30,7 @@ saveHighScore = e => {
     highScores.splice(5)
 
     localStorage.setItem('highScores', JSON.stringify(highScores))
-    window.location.assign('/')
+    window.location.assign('https://ahmadammarm.github.io/game-kemerdekaan/game-kuis/index.html')
 
 
 }
